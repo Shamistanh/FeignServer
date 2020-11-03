@@ -10,9 +10,6 @@ import java.util.List;
 @FeignClient(name = "SampleClient", url = "http://localhost:8081")
 public interface SampleClient {
 
-    @GetMapping("/subs")
-    List<User> getUsers();
-
     @GetMapping("/findAll")
     List<User> findAll();
 

@@ -3,18 +3,15 @@ package app.controller;
 import app.model.User;
 import app.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,14 +22,8 @@ public class SampleController {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    @GetMapping("subs")
-    public List<User> getSubs(){
-        User sb = new User("1","Shami","pass","+994501234567");
-        return Arrays.asList(sb);
-    }
-
     @GetMapping("findOne")
-    public User findOne(String id){
+    public Optional<User> findOne(String id){
         return userRepo.findById(id);
     }
     @GetMapping("findAll")

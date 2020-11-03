@@ -7,8 +7,6 @@ import java.util.List;
 
 public interface SampleService {
 
-    List<User> getBody();
-
     List<User> getAll();
 
     User findOne(String id);

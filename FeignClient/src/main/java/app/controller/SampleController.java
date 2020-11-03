@@ -16,11 +16,6 @@ public class SampleController {
 
     private final SampleService sampleService;
 
-    @GetMapping("subs")
-    public ResponseEntity<List<User>> getUsers(){
-        return ResponseEntity.ok(sampleService.getBody());
-    }
-
     @GetMapping("findAll")
     public ResponseEntity<List<User>> getAll(){
         return ResponseEntity.ok(sampleService.getAll());
