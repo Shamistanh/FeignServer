@@ -1,8 +1,12 @@
 package app.client;
 
+import app.model.UpdateModel;
 import app.model.User;
+import feign.Headers;
+import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -19,9 +23,10 @@ public interface SampleClient {
     @PostMapping("/save")
     void save(User user);
 
-//    @PostMapping("/update_name")
-//    void update(String old_name, String new_name);
+    @Headers("Content-Type: application/json")
+    @PostMapping("/update_name")
+    void update(UpdateModel updateModel);
 
-    @PostMapping("/removeById")
-    void remove(int id);
+    @PostMapping("/removeById/{id}")
+    void remove(@PathVariable(value = "id") String id);
 }

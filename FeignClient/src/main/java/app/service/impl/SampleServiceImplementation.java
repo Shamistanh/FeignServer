@@ -1,6 +1,7 @@
 package app.service.impl;
 
 import app.client.SampleClient;
+import app.model.UpdateModel;
 import app.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class SampleServiceImplementation implements SampleService {
 
 
     @Override
-    public List<User> getAll() {
+    public List<User> findAll() {
         List<User> all = sampleClient.findAll();
         return all;
     }
@@ -32,13 +33,14 @@ public class SampleServiceImplementation implements SampleService {
         sampleClient.save(user);
     }
 
-//    @Override
-//    public void update(String old_name, String new_name) {
-//        sampleClient.update(old_name,new_name);
-//    }
+    @Override
+    public void update(UpdateModel updateModel) {
+        sampleClient.update(updateModel);
+    }
 
     @Override
-    public void removeById(int id) {
+    public void removeById(String id) {
+        System.out.println("Sample service implementation "+id);
         sampleClient.remove(id);
     }
 }
