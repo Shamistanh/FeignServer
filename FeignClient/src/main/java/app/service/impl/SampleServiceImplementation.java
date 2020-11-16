@@ -3,11 +3,10 @@ package app.service.impl;
 import app.client.SampleClient;
 import app.model.UpdateModel;
 import app.model.User;
+import app.service.SampleService;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import app.service.SampleService;
-
-import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -40,7 +39,7 @@ public class SampleServiceImplementation implements SampleService {
 
     @Override
     public void removeById(String id) {
-        System.out.println("Sample service implementation "+id);
         sampleClient.remove(id);
     }
+
 }

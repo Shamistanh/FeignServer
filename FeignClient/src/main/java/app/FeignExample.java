@@ -10,6 +10,6 @@ public class FeignExample {
 
     public static void main(String[] args) {
         SpringApplication.run(FeignExample.class, args);
-     }
+    }
 
 }

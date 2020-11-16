@@ -1,6 +1,5 @@
 package app.model;
 
-import com.sun.corba.se.spi.ior.ObjectId;
 import lombok.Data;
 
 @Data

@@ -3,13 +3,13 @@ package app.client;
 import app.model.UpdateModel;
 import app.model.User;
 import feign.Headers;
-import feign.RequestLine;
+import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
+
 
 @FeignClient(name = "SampleClient", url = "http://localhost:8081")
 public interface SampleClient {
@@ -29,4 +29,5 @@ public interface SampleClient {
 
     @PostMapping("/removeById/{id}")
     void remove(@PathVariable(value = "id") String id);
+
 }

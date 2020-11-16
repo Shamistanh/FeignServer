@@ -2,7 +2,6 @@ package app.service;
 
 import app.model.UpdateModel;
 import app.model.User;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 

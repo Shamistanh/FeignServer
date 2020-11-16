@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.15">
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\FeignExample.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\client\SampleClient.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\controller\SampleController.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\model\UpdateModel.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\model\User.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\service\SampleService.java">
+</file>
+<file name="C:\Users\004461\IdeaProjects\FeignClient\src\main\java\app\service\impl\SampleServiceImplementation.java">
+</file>
+</checkstyle>
