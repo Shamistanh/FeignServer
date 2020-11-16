@@ -37,7 +37,7 @@ public class SampleController {
     }
 
     @PostMapping("/save")
-    public void save(User user) {
+    public void save(@RequestBody User user) {
         userRepo.save(user);
     }
 

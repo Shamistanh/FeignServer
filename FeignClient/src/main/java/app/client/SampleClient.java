@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @FeignClient(name = "SampleClient", url = "http://localhost:8081")
@@ -21,7 +21,7 @@ public interface SampleClient {
     User findOne(String id);
 
     @PostMapping("/save")
-    void save(User user);
+    void save(@RequestBody User user);
 
     @Headers("Content-Type: application/json")
     @PostMapping("/update_name")
