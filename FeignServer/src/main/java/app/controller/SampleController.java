@@ -2,7 +2,7 @@ package app.controller;
 
 import app.model.UpdateModel;
 import app.model.User;
-import app.repo.UserRepo;
+import app.service.SampleService;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -21,24 +21,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class SampleController {
 
-    private final UserRepo userRepo;
+    private final SampleService sampleService;
 
     @Autowired
     MongoTemplate mongoTemplate;
 
     @GetMapping("findOne")
     public Optional<User> findOne(String id) {
-        return userRepo.findById(id);
+        return sampleService.findById(id);
     }
 
     @GetMapping("findAll")
     public List<User> findAll() {
-        return userRepo.findAll();
+        return sampleService.findAll();
     }
 
     @PostMapping("/save")
     public void save(@RequestBody User user) {
-        userRepo.save(user);
+        sampleService.save(user);
     }
 
     @PostMapping("/update_name")
@@ -53,6 +53,11 @@ public class SampleController {
 
     @PostMapping("/removeById/{id}")
     public void remove(@PathVariable(value = "id") String id) {
-        userRepo.removeById(id);
+        sampleService.removeById(id);
+    }
+
+    @PostMapping("/removeAll")
+    public void removeAll() {
+//        sampleService.removeAll();
     }
 }

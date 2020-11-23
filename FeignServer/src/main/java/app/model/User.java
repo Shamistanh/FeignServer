@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 public class User {
     @Field
-    String id;
+    int id;
     @Field
     String name;
     @Field

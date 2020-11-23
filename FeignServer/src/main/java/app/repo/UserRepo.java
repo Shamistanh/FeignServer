@@ -12,5 +12,7 @@ public interface UserRepo extends MongoRepository<User, String> {
 
     void removeById(String id);
 
+//    void removeAll();
+
     Optional<User> findById(String id);
 }
