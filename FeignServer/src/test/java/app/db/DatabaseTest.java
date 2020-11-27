@@ -13,11 +13,11 @@ import org.junit.Test;
 
 
 public class DatabaseTest {
-    List<User> all = Arrays.asList(new User(0,"Shami","123","456789"),
-            new User(1,"Allahverdi","181","458879"),
-            new User(2,"Cahid","793","477989"),
-            new User(3,"Elbrus","118","788762"),
-            new User(4,"Elbrus","118","788762"));
+    List<User> all = Arrays.asList(new User("0","Shami","123","456789"),
+            new User("1","Allahverdi","181","458879"),
+            new User("2","Cahid","793","477989"),
+            new User("3","Elbrus","118","788762"),
+            new User("4","Elbrus","118","788762"));
 
     @Test
     public void findAll() {
